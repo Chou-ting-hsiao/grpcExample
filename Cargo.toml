@@ -1,0 +1,28 @@
+[package]
+name = "grpc"
+version = "0.1.0"
+authors = ["Chou-ting-hsiao <kk156868@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "protos"
+path = "src/protos/mod.rs"
+
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+futures = "0.1.29"
+grpcio = "0.4"
+protobuf = "2.8.1"
+
+[build-dependencies]
+protoc-grpcio = "1.1.0"
